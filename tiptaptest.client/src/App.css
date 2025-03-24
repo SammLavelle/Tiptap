@@ -1,0 +1,12 @@
+﻿
+.tiptap__editor{
+    width: 100%;
+    border: 1px solid black;
+    min-height: 50px;
+}
+
+.tiptap__json-preview{
+     width: 100%;
+    border: 1px solid black;
+    min-height: 50px;
+}

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tiptaptest.client", "tiptaptest.client\tiptaptest.client.esproj", "{12547BCB-0F68-FDAC-D232-AE78363EE4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipTapTest.Server", "TipTapTest.Server\TipTapTest.Server.csproj", "{6230FB29-2402-4FF1-8770-4DCD9373D08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12547BCB-0F68-FDAC-D232-AE78363EE4CC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6230FB29-2402-4FF1-8770-4DCD9373D08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6230FB29-2402-4FF1-8770-4DCD9373D08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6230FB29-2402-4FF1-8770-4DCD9373D08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6230FB29-2402-4FF1-8770-4DCD9373D08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {735F6C34-4FC4-4178-92F1-4943593565E4}
+	EndGlobalSection
+EndGlobal
