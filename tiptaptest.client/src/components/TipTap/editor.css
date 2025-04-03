@@ -1,0 +1,35 @@
+.tiptap-autocomplete-dropdown {
+	 background: v#ffffff;
+	 border: 1px solidrgb(204, 204, 204);
+	 border-radius: 0.7rem;
+	 box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+	 display: flex;
+	 flex-direction: column;
+	 gap: 0.1rem;
+	 overflow: auto;
+	 padding: 0.4rem;
+	 position: relative;
+}
+ .tiptap-autocomplete-dropdown button {
+	 align-items: center;
+	 background-color: transparent;
+	 display: flex;
+	 gap: 0.25rem;
+	 text-align: left;
+	 width: 100%;
+}
+ .tiptap-autocomplete-dropdown button:hover, .tiptap-autocomplete-dropdown button:hover.is-selected {
+	 background-color: rgb(233, 233, 233);
+}
+ .tiptap-autocomplete-dropdown button.is-selected {
+	 background-color: rgb(233, 233, 233);
+}
+ 
+@media print {
+	.page-break {
+		break-before: page;
+		break-after: page;
+		content: "Page Break";
+		text-align: center;
+	}
+}

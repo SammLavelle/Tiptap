@@ -10,6 +10,20 @@ const TipTapToolbar = () => {
          <div className="control-group">
       <div className="button-group">
         <button
+            onClick={() => editor.chain().focus().setFontFamily('serif').run()}
+            className={editor.isActive('textStyle', { fontFamily: 'serif' }) ? 'is-active' : ''}
+            data-test-id="serif"
+          >
+            Serif
+          </button>
+          <button
+            onClick={() => editor.chain().focus().setFontFamily('sans-serif').run()}
+            className={editor.isActive('textStyle', { fontFamily: 'sans-serif' }) ? 'is-active' : ''}
+            data-test-id="sans-serif"
+          >
+            Sans Serif
+          </button>
+        <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           className={editor.isActive('bold') ? 'is-active' : ''}
         >
@@ -31,7 +45,7 @@ const TipTapToolbar = () => {
             onClick={() => editor.chain().focus().toggleUnderline().run()}
             className={editor.isActive('underline') ? 'is-active' : ''}
           >
-            Toggle underline
+            Underline
           </button>
           <button
             onClick={() => editor.chain().focus().setTextAlign('left').run()}
@@ -57,6 +71,11 @@ const TipTapToolbar = () => {
           >
             Justify
           </button>
+		  <button
+		  	onClick={() => editor.chain().focus().addIndent().run()}
+			>
+				Indent text
+			</button>
 
            <input
             type="color"
@@ -64,25 +83,77 @@ const TipTapToolbar = () => {
             value={editor.getAttributes('textStyle').color}
             data-testid="setColor"
           />
+           <button
+            onClick={() => editor.chain().focus().toggleHighlight().run()}
+            className={editor.isActive('highlight') ? 'is-active' : ''}
+          >
+            Highlight
+          </button>
           <button
             onClick={() => editor.chain().focus().toggleSubscript().run()}
             className={editor.isActive('subscript') ? 'is-active' : ''}
           >
-            Toggle subscript
+            Subscript
           </button>
            <button
             onClick={() => editor.chain().focus().toggleSuperscript().run()}
             className={editor.isActive('superscript') ? 'is-active' : ''}
           >
-            Toggle superscript
+            Superscript
           </button>
-
-        <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
+          <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
           Clear marks
         </button>
-        <button onClick={() => editor.chain().focus().clearNodes().run()}>
-          Clear nodes
-        </button>
+          </div>
+          <div className="button-group">
+            <button
+            onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()
+            }
+          >
+            Insert table
+          </button>
+          <button onClick={() => editor.chain().focus().addColumnBefore().run()}>
+            Add column before
+          </button>
+          <button onClick={() => editor.chain().focus().addColumnAfter().run()}>Add column after</button>
+          <button onClick={() => editor.chain().focus().deleteColumn().run()}>Delete column</button>
+          <button onClick={() => editor.chain().focus().addRowBefore().run()}>Add row before</button>
+          <button onClick={() => editor.chain().focus().addRowAfter().run()}>Add row after</button>
+          <button onClick={() => editor.chain().focus().deleteRow().run()}>Delete row</button>
+          <button onClick={() => editor.chain().focus().deleteTable().run()}>Delete table</button>
+          <button onClick={() => editor.chain().focus().mergeCells().run()}>Merge cells</button>
+          <button onClick={() => editor.chain().focus().splitCell().run()}>Split cell</button>
+          <button onClick={() => editor.chain().focus().toggleHeaderColumn().run()}>
+            Toggle header column
+          </button>
+          <button onClick={() => editor.chain().focus().toggleHeaderRow().run()}>
+            Toggle header row
+          </button>
+          <button onClick={() => editor.chain().focus().toggleHeaderCell().run()}>
+            Toggle header cell
+          </button>
+          <button onClick={() => editor.chain().focus().fixTables().run()}>Fix tables</button>
+          </div>
+          <div className="button-group">
+
+        <button
+            onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+            className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
+          >
+            H1
+          </button>
+          <button
+            onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+            className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
+          >
+            H2
+          </button>
+          <button
+            onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+            className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}
+          >
+            H3
+          </button>
         <button
           onClick={() => editor.chain().focus().setParagraph().run()}
           className={editor.isActive('paragraph') ? 'is-active' : ''}
@@ -101,11 +172,17 @@ const TipTapToolbar = () => {
         >
           Ordered list
         </button>
+		<button onClick={() => editor.chain().focus().setImage({ src: "https://picsum.photos/200" }).run()}>
+			Insert image
+		</button>
         <button onClick={() => editor.chain().focus().setHorizontalRule().run()}>
           Horizontal rule
         </button>
         <button onClick={() => editor.chain().focus().setHardBreak().run()}>
           Hard break
+        </button>
+        <button onClick={() => editor.chain().focus().setPageBreak().run()}>
+          Insert page break
         </button>
         <button onClick={() => editor.chain().focus().undo().run()}>
           Undo
