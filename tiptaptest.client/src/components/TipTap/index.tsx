@@ -21,6 +21,7 @@ import Mention from "@tiptap/extension-mention";
 import suggestion from "./CustomNodes/AutoCompletedVariables/suggestion";
 
 import "./editor.css";
+import DownloadSampleButton from "./DownloadSampleButton";
 
 const extensions = [
     StarterKit,
@@ -72,7 +73,7 @@ const TipTap = () => {
             <EditorProvider 
                 extensions={extensions} 
                 content={content}
-                slotBefore={<TipTapToolbar />}
+                slotBefore={<><TipTapToolbar /><DownloadSampleButton /></>}
                 slotAfter={<EditorJSONPreview />}
             >
             </EditorProvider>
@@ -82,4 +83,3 @@ const TipTap = () => {
 };
 
 export default TipTap;
-
